@@ -21,11 +21,19 @@
         height: 200px;
         background: #f4f4f4;
         object-fit: contain;
-    }  
+    }
+    .good {
+        text-align: center;
+        font-size: 25px;
+        background-color: blanchedalmond;
+        border-radius: 45px;
+        margin-right: 30%;
+        margin-left: 30%;
+    }
 </style>
 <body>
     <div style="height:100px;"></div>
-    <div class="container"style=" padding-top: 22px;">
+    <div class="container"style="padding-top: 22px;">
         @*首頁圖片 css內*@
         <div class="d-flex">
             <div style="height:130px;width:260px;" id=""><a href="/"><img style="height:100%;width:100%;" src="~/Content/ProductPostImg/廣告1.jpg" /></a></div>
@@ -41,9 +49,10 @@
         <div style="height:50px;" id="tag" class="d-flex"></div>
         @*TAG*@
         @*五星*@
+        <p  class="good">好評商家賣場推薦</p>
         <div class="container-fluid paddding mb-5">
             <div class="col-md-12">
-                <div class=" StarFiveStyle"> <p style="font-size:30px;">好評商家作品推薦</p></div>
+                <div class=" StarFiveStyle"> </div>
                 <div class="row" id="StarFive2">
 
                 </div>
@@ -72,7 +81,8 @@
         @*徵求台輪播*@
         <div class="row mb-lg-3">
             <div class="col-md-12 ">
-                <div class="d-flex" style="background: linear-gradient(#FFB4A2,#E5989B);border-radius:5px;">
+                <div class="d-flex" style="        background: linear-gradient(#ffdcc5,#f4bfbf);
+        border-radius: 5px;">
                     <p class="mb-2 col-3" style="font-weight: bold; font-size: 18px; font-family: fantasy;">徵求台</p>
                     <p class="col-6"></p>
                     @*@Html.ActionLink("更多", "requiredPostIndexWithLogin", "RequiredPost", null, new { @class = "" })*@
@@ -82,10 +92,35 @@
                     <div class="carousel-inner  d-md-flex theWidth2 mt-3" id="NewAddCarousel">
                     </div>
                     <div id="NewprevSlide" class="slide_btn">
-                        <i class="fa fa-caret-left"></i>
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" width="16px" height="16px" viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve">  <image id="image0" width="32" height="32" x="0" y="0" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgAgMAAAAOFJJnAAAABGdBTUEAALGPC/xhBQAAACBjSFJN AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAADFBMVEX///9YseNXseP////h Slq/AAAAAnRSTlMAgJsrThgAAAABYktHRACIBR1IAAAACXBIWXMAAADdAAAA3QFwU6IHAAAAB3RJ TUUH5QQCCgY4phvUFAAAAC9JREFUGNNjYGBgYFy1atVKIM3ABmQsATGkgIwJIEYWkOFATyUIBlwK rhiunY6KALrBVQGNupb8AAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDIxLTA0LTAyVDEwOjA2OjU2KzAw OjAwzl2A3AAAACV0RVh0ZGF0ZTptb2RpZnkAMjAyMS0wNC0wMlQxMDowNjo1NiswMDowML8AOGAA AAAZdEVYdFNvZnR3YXJlAHd3dy5pbmtzY2FwZS5vcmeb7jwaAAAAAElFTkSuQmCC" />
+
+
+
+
+
+
+
+</svg>
+
                     </div>
                     <div id="NewnextSlide" class="slide_btn ">
-                        <i class="fa fa-caret-right"></i>
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" width="16px" height="16px" viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve">  <image id="image0" width="32" height="32" x="0" y="0" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgEAYAAAAj6qa3AAAABGdBTUEAALGPC/xhBQAAACBjSFJN AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAABmJLR0QAAAAAAAD5Q7t/AAAA CXBIWXMAAABgAAAAYADwa0LPAAAAB3RJTUUH5QQCCgshd94CmQAAAjFJREFUaN7l2T9IG1EcB/Df 78VBECyIAYe7VOiSCBYsFFyawck4JAHNnzopUmJQySA0Q3DSICl29M+J4tjkYiXaISJExaEtOFha GhzTphbBbqVtltxz8TkUJGrynnnnd3rHHffu+zlu+HEIF/F/2rIWmycncZauwNe5OeCVbUhge6kE H/EfDEUiKYf7SFldXua2X4UQtqBx460RzWbhMSRAPzvjtmMvRGmhsRGOaRcdWVrylzMvfyRDoTsH SKe9zoexfJ60kpLl2OmEp7CGodNTbjsnwQMqIm7hL2pbXAzGN5uKrrEx0QB41Ynn2rsnP1/Y7cZv w2ac7O3BIQxTra2N25MEYROKlGIeUjA9MZGMef6o2fn5OwO4LxAVAcwOcW0As0LcGMBsELcGMAtE 1QCyQ9QMQFaImgPIBsENQBYI7gD1DiEMoF4hhAOw+AYyg8XXnZ2kCwsAuRx8hij4rVbeEPAG3KgG Aind41XUdJpUf2e5gk20BTYoZcfCAQLhjS+F9w4H6ca/mNvZEfXmaQ8OwLPx8eSa16lE1tcvQUQX h0eWqYaZ3V1R3z4rrj9w96nlhYX/L+MOUK/FuQPUe3FuALIUrzmAbMVrBiBr8aoBZC9+awCzFL8x gNmKXxvArMUrApi9+JUA96U4SwNb+HyZg2/xjg5QMEQ+7O/DIUSpJmBIcdNW/B4O6xZPn1LWNFHF WS6nQYyRfpJwubhPZ+z3uB2PcHV0VLd4XylB8cVZzgFIuZQyg5NqQgAAACV0RVh0ZGF0ZTpjcmVh dGUAMjAyMS0wNC0wMlQxMDoxMTozMyswMDowMHlYYkUAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMjEt MDQtMDJUMTA6MTE6MzMrMDA6MDAIBdr5AAAAAElFTkSuQmCC" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</svg>
                     </div>
                 </div>
             </div>
@@ -117,7 +152,8 @@
         @*最新商品輪播*@
         <div class="row mt-lg-3">
             <div class="col-md-12 ">
-                <div class="d-flex" style="        background: linear-gradient(#FFB4A2,#E5989B);border-radius:5px;">
+                <div class="d-flex" style="        background: linear-gradient(#ffdcc5,#f4bfbf);
+        border-radius: 5px;">
                     <p class="mb-2 col-3" style="font-weight: bold; font-size: 18px; font-family: fantasy;">最新商品</p>
                     <p class="col-6"></p>
                     <a class="mt-3 col-3" style="left:15%;" href="~/NewMaimaiIndex/ProuductpostAll">更多商品>></a>
@@ -151,10 +187,23 @@
                         <a href="/PersonalMarket/Personal_Index_WithoutLogin?UserID="></a>
                     </div>
                     <div id="prevSlide" class="slide_btn">
-                        <i class="fa fa-caret-left"></i>
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" width="16px" height="16px" viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve">  <image id="image0" width="32" height="32" x="0" y="0" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgAgMAAAAOFJJnAAAABGdBTUEAALGPC/xhBQAAACBjSFJN AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAADFBMVEX///9YseNXseP////h Slq/AAAAAnRSTlMAgJsrThgAAAABYktHRACIBR1IAAAACXBIWXMAAADdAAAA3QFwU6IHAAAAB3RJ TUUH5QQCCgY4phvUFAAAAC9JREFUGNNjYGBgYFy1atVKIM3ABmQsATGkgIwJIEYWkOFATyUIBlwK rhiunY6KALrBVQGNupb8AAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDIxLTA0LTAyVDEwOjA2OjU2KzAw OjAwzl2A3AAAACV0RVh0ZGF0ZTptb2RpZnkAMjAyMS0wNC0wMlQxMDowNjo1NiswMDowML8AOGAA AAAZdEVYdFNvZnR3YXJlAHd3dy5pbmtzY2FwZS5vcmeb7jwaAAAAAElFTkSuQmCC" />
+
+
+
+</svg>
                     </div>
                     <div id="nextSlide" class="slide_btn ">
-                        <i class="fa fa-caret-right"></i>
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" width="16px" height="16px" viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve">  <image id="image0" width="32" height="32" x="0" y="0" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgEAYAAAAj6qa3AAAABGdBTUEAALGPC/xhBQAAACBjSFJN AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAABmJLR0QAAAAAAAD5Q7t/AAAA CXBIWXMAAABgAAAAYADwa0LPAAAAB3RJTUUH5QQCCgshd94CmQAAAjFJREFUaN7l2T9IG1EcB/Df 78VBECyIAYe7VOiSCBYsFFyawck4JAHNnzopUmJQySA0Q3DSICl29M+J4tjkYiXaISJExaEtOFha GhzTphbBbqVtltxz8TkUJGrynnnnd3rHHffu+zlu+HEIF/F/2rIWmycncZauwNe5OeCVbUhge6kE H/EfDEUiKYf7SFldXua2X4UQtqBx460RzWbhMSRAPzvjtmMvRGmhsRGOaRcdWVrylzMvfyRDoTsH SKe9zoexfJ60kpLl2OmEp7CGodNTbjsnwQMqIm7hL2pbXAzGN5uKrrEx0QB41Ynn2rsnP1/Y7cZv w2ac7O3BIQxTra2N25MEYROKlGIeUjA9MZGMef6o2fn5OwO4LxAVAcwOcW0As0LcGMBsELcGMAtE 1QCyQ9QMQFaImgPIBsENQBYI7gD1DiEMoF4hhAOw+AYyg8XXnZ2kCwsAuRx8hij4rVbeEPAG3KgG Aind41XUdJpUf2e5gk20BTYoZcfCAQLhjS+F9w4H6ca/mNvZEfXmaQ8OwLPx8eSa16lE1tcvQUQX h0eWqYaZ3V1R3z4rrj9w96nlhYX/L+MOUK/FuQPUe3FuALIUrzmAbMVrBiBr8aoBZC9+awCzFL8x gNmKXxvArMUrApi9+JUA96U4SwNb+HyZg2/xjg5QMEQ+7O/DIUSpJmBIcdNW/B4O6xZPn1LWNFHF WS6nQYyRfpJwubhPZ+z3uB2PcHV0VLd4XylB8cVZzgFIuZQyg5NqQgAAACV0RVh0ZGF0ZTpjcmVh dGUAMjAyMS0wNC0wMlQxMDoxMTozMyswMDowMHlYYkUAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMjEt MDQtMDJUMTA6MTE6MzMrMDA6MDAIBdr5AAAAAElFTkSuQmCC" />
+
+
+
+
+
+
+
+</svg>
+
                     </div>
                 </div>
             </div>
@@ -248,7 +297,7 @@
                                              <div class="img-responsive "  style="background-image:url(../Content/resource_nico/images/徵求台POST/${item.postImg})
                                                             ;height: 200px; width: 200px;background-size:cover;" ></div>
                                             <div class="hidetext">名稱 : ${item.postName}</div>
-                                            <div class="price">金額 : ${item.estimatePrice}$</div>
+                                            <div class="price">金額 : $${item.estimatePrice}</div>
                                        </a>
                                 </div>
                         </div>
@@ -290,7 +339,7 @@
                                              <div class="img-responsive "  style="background-image:url(../Content/ProductPostImg/${item.productImg})
                                                             ;height: 200px; width: 200px;background-size:cover;"></div>
                                             <div class="hidetext">${item.productName}</div>
-                                            <div class="price">金額: ${item.price}$</div>
+                                            <div class="price">金額: $${item.price}</div>
                                        </a>
                                 </div>
                         </div>
